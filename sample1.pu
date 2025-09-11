@@ -1,0 +1,6 @@
+@startuml
+object 生物
+object 人間
+object 生物 <--- 人間
+object さこんさん
+@enduml
