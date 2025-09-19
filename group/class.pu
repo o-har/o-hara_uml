@@ -1,0 +1,13 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Dummy {
+ -名前
+ -挨拶
+ -時刻
+ -足し算
+ +名前を変更することができる()
+ +時刻に応じた挨拶する()
+ +2つの整数足し算をする()
+}
+
+@enduml

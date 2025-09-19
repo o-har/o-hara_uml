@@ -1,0 +1,21 @@
+@startuml Web論文システムユースケース図
+left to right direction
+actor 訪問者 as U1
+
+rectangle 訪問者システム as WRS {
+  usecase  登録情報を変更する as UC1
+  usecase "☆訪問者の情報を登録する" as UC2
+  usecase "☆訪問者の情報を参照する" as UC3
+  usecase "☆ログアウト" as UC3
+  usecase "☆ログイン" as UC3
+  usecase "☆登録情報を削除する" as UC4
+}
+
+note right of WRS: ☆マーク:\nユースケース記述、ロバストネス図、シーケンス図を省略
+
+U1 --> UC1
+U1 --> UC2
+U1 --> UC3
+U1 --> UC4
+
+@enduml

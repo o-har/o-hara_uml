@@ -1,0 +1,37 @@
+@startuml 大原情報科学大学・図書館システム
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor 事務職員 as A
+boundary システムメニュー as B1
+boundary 書籍登録画面 as B2
+boundary 予約完了画面 as B3
+control 書名取得 as C1
+control 書籍登録 as C2
+entity 書籍情報 as E
+
+A -> B1: 「書籍の予約」を選択()
+activate B1
+B1 -> C1: 書名を取得()
+activate C1
+C1 -> E: 名前参照()
+activate E
+
+
+A -> B2: 新しい名前を入力()
+
+B2 -> C2: 新しい名前を登録()
+activate C2
+C2 -> E: 名前保存()
+activate E
+E --> C2: 保存完了()
+deactivate E
+
+C2 -> B3: 表示()
+deactivate C2
+deactivate B2
+activate B3
+
+@enduml
